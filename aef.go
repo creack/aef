@@ -73,7 +73,6 @@ func loadCommandlineFlags(ss interface{}, setMap map[string]bool) error {
 
 	// Check which flags have been set
 	flag.Visit(func(f *flag.Flag) {
-		println("---------->", f.Name)
 		setMap[f.Name] = true
 	})
 	return nil
